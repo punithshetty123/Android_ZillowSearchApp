@@ -1,0 +1,160 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/chicago_skyline_479837006"
+    android:orientation="vertical"
+    android:padding="@dimen/abc_action_bar_subtitle_bottom_margin"
+    tools:context="com.example.zillowsearch.MainActivity" >
+
+    <TextView
+        android:id="@+id/appHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_marginBottom="20sp"
+        android:text="@string/appHeading" 
+        android:textColor="#ffffff"/>
+    
+    <TextView
+        android:id="@+id/addressLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:text="@string/addressLabel" />
+
+
+    
+    <EditText
+        android:id="@+id/addressZillow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundedbox"
+        android:ems="10"
+        android:hint="@string/address"
+        android:inputType="text"
+        android:padding="@dimen/abc_action_bar_subtitle_bottom_margin" >
+        <requestFocus />
+    </EditText>
+  
+    <TextView
+        android:id="@+id/addressError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:layout_marginBottom="10sp"
+        android:visibility="invisible"
+        android:text="@string/errorMessage" />
+        
+ 	<TextView
+        android:id="@+id/cityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="#ffffff"
+        android:text="@string/cityLabel" />
+
+    <EditText
+        android:id="@+id/cityZillow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundedbox"
+        android:ems="10"
+        android:hint="@string/city"
+        android:inputType="text"
+        android:padding="@dimen/abc_action_bar_subtitle_bottom_margin" >
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/cityError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:layout_marginBottom="10sp"
+        android:visibility="invisible"
+        android:text="@string/errorMessage" />
+    
+	<TextView
+        android:id="@+id/stateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="#ffffff"
+        android:text="@string/stateLabel" />
+
+    <Spinner
+        android:id="@+id/stateZillow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/country_arrays"
+        android:background="@drawable/roundedbox"
+        android:padding="@dimen/abc_action_bar_subtitle_bottom_margin" 
+      >
+        <requestFocus />
+    </Spinner>
+
+    <TextView
+        android:id="@+id/stateError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:visibility="invisible"
+        android:layout_marginBottom="10sp"
+        android:text="@string/errorMessage" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/submitZillow"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="zillowPhp"
+            android:text="@string/button" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/imageZillow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:src="@drawable/zillowlogo"
+                android:onClick="zillowPage" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    
+ <View
+             android:layout_width="fill_parent"
+             android:layout_height="2dp"
+             android:background="#ffffff"
+             android:layout_marginTop="10dp"
+             android:layout_marginBottom="10dp"
+             
+             />
+ 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/jsonerror"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/noResultMsg"
+            android:textColor="#ffffff"
+            android:visibility="invisible"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+   
+
+</LinearLayout>
